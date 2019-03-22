@@ -26,21 +26,21 @@ namespace ContestProject.Utils
 
     public static class ObservableObjectExtensions
     {
-        private static readonly Action<ObservableObject, string, string[]> _raisePropertyChangedMethod;
+        private static readonly Action<ObservableObject, string> _raisePropertyChangedMethod;
 
         static ObservableObjectExtensions()
-            => _raisePropertyChangedMethod = (Action<ObservableObject, string, string[]>)typeof(ObservableObject)
+            => _raisePropertyChangedMethod = (Action<ObservableObject, string>)typeof(ObservableObject)
             .GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
             .Where(m => m.Name is "RaisePropertyChanged")
             .First(m => m.GetParameters().Length == 2)
-            .CreateDelegate(typeof(Action<ObservableObject, string, string[]>));
+            .CreateDelegate(typeof(Action<ObservableObject, string>));
 
-        public static bool Set<T>(this ObservableObject @this, ref T field, T value, [CallerMemberName] string propertyName = null, params string[] additionalPropertyNamesOfPath)
+        public static bool Set<T>(this ObservableObject @this, ref T field, T value, [CallerMemberName] string propertyName = null)
         {
             if (field == null || !EqualityComparer<T>.Default.Equals(field, value))
             {
                 field = value;
-                _raisePropertyChangedMethod(@this, propertyName, additionalPropertyNamesOfPath);
+                _raisePropertyChangedMethod(@this, propertyName);
                 return true;
             }
             return false;
