@@ -13,14 +13,11 @@ namespace ContestProject
         public abstract string Execute(string input);
 
         public void ExecuteInput(string line)
-        {
-            line = (line ?? string.Empty).Trim();
-            Output = Execute(line);
-        }
+            => Output = Execute(line?.Trim() ?? string.Empty);
 
         public void ExecuteFile(string fileName)
         {
-            string content = string.Empty;
+            var content = string.Empty;
             if (fileName != null && File.Exists(fileName))
                 content = File.ReadAllText(fileName);
             ViewModel.CurInput = content;
@@ -33,9 +30,6 @@ namespace ContestProject
             Process.Start(outputFileName);
             Output = output;
         }
-
-        protected virtual char GetSeparator()
-            => ';';
 
         private string GetOutFileName(string fileName)
             => Path.GetFullPath(fileName ?? "input.txt") + ".out.txt";
