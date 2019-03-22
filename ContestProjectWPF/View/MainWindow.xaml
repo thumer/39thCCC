@@ -1,0 +1,122 @@
+﻿<Window x:Class="ContestProjectWPF.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContestProjectWPF"
+        mc:Ignorable="d"
+        Title="Contest Solution" Height="800" Width="800" Drop="Filename_Drop" DragEnter="Filename_DragEnter" AllowDrop="True">
+    <Window.InputBindings>
+        <!--<KeyBinding Key="F3" Command="{Binding ReceiveCommand}" />-->
+        <KeyBinding Key="F4" Command="{Binding RunCommand}" />
+        <KeyBinding Key="F5" Command="{Binding RunFileCommand}" />
+        <!--<KeyBinding Key="F5" Command="{Binding SendCommand}" />-->
+    </Window.InputBindings>
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--<RowDefinition Height="30" />
+            <RowDefinition Height="30" />-->
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--<StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBlock Width="100" Text="Arguments" VerticalAlignment="Center" />
+            <TextBox Text="{Binding JavaArguments}" Width="400" Margin="0,0,10,0" VerticalAlignment="Center" />
+            <Button Content="Start Java &amp; Connect" Width="120" Margin="0,0,10,0" Command="{Binding StartJavaConnectCommand}" />
+            <Button Content="Disconnect &amp; Close" Width="120" Margin="0,0,10,0" Command="{Binding DisconnectAndCloseCommand}" />
+        </StackPanel>-->
+
+        <!--<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+            <Button Content="Start" Width="100" Margin="0,0,10,0" Command="{Binding StartCommand}" />
+            <Button Content="Stop" Width="100" Margin="0,0,10,0" Command="{Binding StopCommand}" />
+            <TextBlock Margin="0,0,10,0">Delay</TextBlock>
+            <TextBox Text="{Binding Delay, UpdateSourceTrigger=PropertyChanged}" Width="30" Margin="0,0,10,0" VerticalAlignment="Center" />
+            <CheckBox Content="Output" IsChecked="{Binding ShowOutput, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" />
+        </StackPanel>-->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <!--<Button Content="Receive/Run/Send" Width="100" Margin="0,0,10,0" Command="{Binding ReadAndRunAndSendCommand}" />
+            <Button Content="Receive (F3)" Width="100" Margin="0,0,10,0" Command="{Binding ReceiveCommand}" />-->
+            <Button Content="Run (F4)" Width="100" Margin="0,0,10,0" Command="{Binding RunCommand}" />
+            <Button Content="Run File (F5)" Width="100" Margin="0,0,10,0" Command="{Binding RunFileCommand}" />
+            <!--<Button Content="Send (F5)" Width="100" Margin="0,0,10,0" Command="{Binding SendCommand}" />-->
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="5" Orientation="Vertical">
+            <!--File-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Margin="0,0,10,0" VerticalAlignment="Center">Filename</TextBlock>
+                <TextBox x:Name="txtFilename" Grid.Column="1" Text="{Binding Filename, UpdateSourceTrigger=PropertyChanged}" Margin="0,4,0,4" VerticalAlignment="Center" />
+            </Grid>
+            <!--PARAM1-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Margin="0,0,10,0" VerticalAlignment="Center">Param1</TextBlock>
+                <TextBox Grid.Column="1" Text="{Binding Param1}" Margin="0,4,0,4" VerticalAlignment="Center" />
+            </Grid>
+
+            <!--PARAM2-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Margin="0,0,10,0" VerticalAlignment="Center">Param2</TextBlock>
+                <TextBox Grid.Column="1" Text="{Binding Param2}" Margin="0,4,0,4" VerticalAlignment="Center" />
+            </Grid>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Column="0" Margin="0,0,0,5" VerticalAlignment="Top">Input</TextBlock>
+            <TextBox Grid.Column="0" Grid.Row="1" Text="{Binding CurInput, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+
+            <TextBlock Grid.Column="1" Margin="10,0,0,5" VerticalAlignment="Top">Result</TextBlock>
+            <TextBox Grid.Column="1" Grid.Row="1" Margin="10,0,0,0" Text="{Binding CurResult, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Margin="0,0,10,5" VerticalAlignment="Top">Output</TextBlock>
+            <Button Content="Clear" Margin="0,0,0,5" HorizontalAlignment="Right" Command="{Binding ClearOutputCommand}"/>
+
+            <TextBox Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Output}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
+        </Grid>
+    </Grid>
+</Window>
