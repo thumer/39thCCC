@@ -6,120 +6,34 @@ namespace ContestProject.ViewModel
     {
         public DelegateCommand RunCommand { get; }
         public DelegateCommand RunFileCommand { get; }
-
         public DelegateCommand ClearOutputCommand { get; }
 
         private string _curInput;
         public string CurInput
         {
-            get
-            {
-                return _curInput;
-            }
-            set
-            {
-                _curInput = value;
-                RaisePropertyChanged(() => CurInput);
-            }
+            get => _curInput;
+            set => this.Set(ref _curInput, value);
         }
 
         private string _curResult;
         public string CurResult
         {
-            get
-            {
-                return _curResult;
-            }
-            set
-            {
-                _curResult = value;
-                RaisePropertyChanged(() => CurResult);
-            }
+            get => _curResult;
+            set => this.Set(ref _curResult, value);
         }
-
 
         private string _output;
         public string Output
         {
-            get
-            {
-                return _output;
-            }
-            set
-            {
-                _output = value;
-                RaisePropertyChanged(() => Output);
-            }
-        }
-
-        private int _delay;
-        public int Delay
-        {
-            get
-            {
-                return _delay;
-            }
-            set
-            {
-                _delay = value;
-                RaisePropertyChanged(() => Delay);
-            }
-        }
-
-        private bool _showOutput;
-        public bool ShowOutput
-        {
-            get
-            {
-                return _showOutput;
-            }
-            set
-            {
-                _showOutput = value;
-                RaisePropertyChanged(() => ShowOutput);
-            }
+            get => _output;
+            set => this.Set(ref _output, value);
         }
 
         private string _filename;
         public string Filename
         {
-            get
-            {
-                return _filename;
-            }
-            set
-            {
-                _filename = value;
-                RaisePropertyChanged(() => Filename);
-            }
-        }
-
-
-        private string _param1;
-        public string Param1
-        {
-            get
-            {
-                return _param1;
-            }
-            set
-            {
-                _param1 = value;
-                RaisePropertyChanged(() => Param1);
-            }
-        }
-        private string _param2;
-        public string Param2
-        {
-            get
-            {
-                return _param2;
-            }
-            set
-            {
-                _param2 = value;
-                RaisePropertyChanged(() => Param2);
-            }
+            get => _filename;
+            set => this.Set(ref _filename, value);
         }
     }
 }
