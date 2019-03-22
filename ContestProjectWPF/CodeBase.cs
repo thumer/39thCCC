@@ -42,21 +42,4 @@ namespace ContestProject
         private string GetOutFileName(string fileName)
             => Path.GetFullPath(fileName ?? "input.txt") + ".out.txt";
     }
-
-    public static class ContentHelper
-    {
-        private static IEnumerable<InputRowElement> ReadInputRowElements(string fileName)
-        {
-            var cc = new CsvContext();
-            var fileDescription_logs = new CsvFileDescription
-            {
-                SeparatorChar = ';', // default is ','
-                FirstLineHasColumnNames = false,
-                EnforceCsvColumnAttribute = true, // default is false
-                FileCultureName = "de-AT" // default is the current culture
-            };
-
-            return cc.Read<InputRowElement>(fileName, fileDescription_logs);
-        }
-    }
 }

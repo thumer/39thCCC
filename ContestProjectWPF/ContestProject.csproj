@@ -140,23 +140,7 @@
     <Compile Include="Code6.cs" />
     <Compile Include="Code7.cs" />
     <Compile Include="CodeBase.cs" />
-    <Compile Include="Combinatorics\Combinations.cs" />
-    <Compile Include="Combinatorics\GenerateOption.cs" />
-    <Compile Include="Combinatorics\IMetaCollection.cs" />
-    <Compile Include="Combinatorics\Permutations.cs" />
-    <Compile Include="Combinatorics\SmallPrimeUtility.cs" />
-    <Compile Include="Combinatorics\Variations.cs" />
     <Compile Include="Utils\DelegateCommand.cs" />
-    <Compile Include="Entities\InputRowElement1.cs" />
-    <Compile Include="Entities\InputRowElement2.cs" />
-    <Compile Include="Entities\InputRowElement3.cs" />
-    <Compile Include="Entities\InputRowElement4.cs" />
-    <Compile Include="Entities\InputRowElement5.cs" />
-    <Compile Include="Entities\InputRowElement6.cs" />
-    <Compile Include="Entities\InputRowElement7.cs" />
-    <Compile Include="Utils\ExpressionHelper.cs" />
-    <Compile Include="Utils\Helper.cs" />
-    <Compile Include="Utils\TCPHelper.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
