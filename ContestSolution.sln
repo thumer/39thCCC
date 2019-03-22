@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQtoCSV", "LINQtoCSV\LINQtoCSV\LINQtoCSV.csproj", "{07058BF9-6F86-40FF-AE33-2A4F89B5758A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQtoCSV", "LINQtoCSV\LINQtoCSV.csproj", "{07058BF9-6F86-40FF-AE33-2A4F89B5758A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContestProjectWPF", "ContestProjectWPF\ContestProjectWPF.csproj", "{C8A42207-0595-4D75-A11B-57836C17E82B}"
 EndProject

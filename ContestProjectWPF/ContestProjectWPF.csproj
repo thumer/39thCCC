@@ -194,7 +194,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LINQtoCSV\LINQtoCSV\LINQtoCSV.csproj">
+    <ProjectReference Include="..\LINQtoCSV\LINQtoCSV.csproj">
       <Project>{07058bf9-6f86-40ff-ae33-2a4f89b5758a}</Project>
       <Name>LINQtoCSV</Name>
     </ProjectReference>
