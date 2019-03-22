@@ -1,28 +1,13 @@
 ﻿using ContestProject.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ContestProject.ViewModel
 {
     public partial class MainViewModel
     {
-        //public DelegateCommand StartJavaConnectCommand { get; set; }
-        //public DelegateCommand DisconnectAndCloseCommand { get; set; }
-        //public DelegateCommand StartCommand { get; set; }
-        //public DelegateCommand StopCommand { get; set; }
-
-        //public DelegateCommand ReadAndRunAndSendCommand { get; set; }
-        //public DelegateCommand ReceiveCommand { get; set; }
         public DelegateCommand RunCommand { get; set; }
         public DelegateCommand RunFileCommand { get; set; }
 
-        //public DelegateCommand SendCommand { get; set; }
-
         public DelegateCommand ClearOutputCommand { get; set; }
-
 
         private string _javaArguments;
         public string JavaArguments
@@ -136,7 +121,7 @@ namespace ContestProject.ViewModel
                 RaisePropertyChanged(() => ShowOutput);
             }
         }
-        
+
         private string _filename;
         public string Filename
         {
