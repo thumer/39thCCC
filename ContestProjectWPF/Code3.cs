@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using LINQtoCSV;
 
-// -------------------------------------------------
-// Wer hots vabrochn? Da Stoascheißer Koarl!
-// -------------------------------------------------
 namespace ContestProjectWPF
 {
 #if Level3

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using ContestProjectWPF.ViewModel;
 using LINQtoCSV;
-using System.IO;
+using System.Collections.Generic;
 using System.Diagnostics;
-using System.Collections;
-using ContestProjectWPF.ViewModel;
-using ContestProjectWPF.Utils;
+using System.IO;
 
 namespace ContestProjectWPF
 {
@@ -23,53 +18,10 @@ namespace ContestProjectWPF
         {
             line = (line ?? string.Empty).Trim();
             Output = Execute(line);
-
-            //else if (typeof(T).IsGenericType && ((typeof(T).GetGenericTypeDefinition() == typeof(IEnumerable<>)) || (typeof(T).GetGenericTypeDefinition().GetInterface(typeof(IEnumerable<>).FullName) != null)))
-            //{
-            //    Type argumentType = typeof(T).GetGenericArguments()[0];
-
-            //    if (argumentType == typeof(String))
-            //    {
-            //        List<String> list = Helper.StringToList(line); // TODO: Hier müsste mann den Separator ändern
-            //        Output = Execute(list as T);
-            //    }
-            //    else
-            //    {
-            //        object list = Helper.StringToList(argumentType, line); // TODO: Hier müsste mann den Separator ändern
-            //        Output = Execute(list as T);
-            //    }
-            //}
         }
 
         public void ExecuteFile(string fileName)
         {
-            //StringBuilder sbOut = new StringBuilder();
-            //IEnumerable rows = null;
-
-            //foreach (object row in rows)
-            //{
-            //    if (typeof(T).IsGenericType && ((typeof(T).GetGenericTypeDefinition() == typeof(IEnumerable<>)) || (typeof(T).GetGenericTypeDefinition().GetInterface(typeof(IEnumerable<>).FullName) != null)))
-            //    {
-            //        Type argumentType = typeof(T).GetGenericArguments()[0];
-            //        String value = row as string;
-
-            //        if (argumentType == typeof(String))
-            //        {
-            //            List<String> list = Helper.StringToList(value); // TODO: Hier müsste mann den Separator ändern
-            //            sbOut.AppendLine(Execute(list as T));
-            //        }
-            //        else
-            //        {
-            //            object list = Helper.StringToList(argumentType, value); // TODO: Hier müsste mann den Separator ändern
-            //            sbOut.AppendLine(Execute(list as T));
-            //        }
-            //    }
-            //    else
-            //    {
-            //        sbOut.AppendLine(Execute(row as T));
-            //    }
-            //}
-
             string content = string.Empty;
             if (fileName != null && File.Exists(fileName))
                 content = File.ReadAllText(fileName);
@@ -85,34 +37,18 @@ namespace ContestProjectWPF
         }
 
         protected virtual char GetSeparator()
-        {
-            return ';';
-        }
+            => ';';
 
         private string GetOutFileName(string fileName)
-        {
-            return System.IO.Path.GetFullPath(fileName ?? "input.txt") + ".out.txt";
-        }
+            => Path.GetFullPath(fileName ?? "input.txt") + ".out.txt";
     }
 
     public static class ContentHelper
     {
-        //public static IEnumerable<InputRowElement> ParseInputRowElements(string input)
-        //{
-        //    input.Replace("\r\n", "\n");
-        //    string tempFile = System.IO.Path.GetTempFileName();
-        //    File.WriteAllText(tempFile, input);
-
-        //    IEnumerable<InputRowElement> rowElements = ReadInputRowElements(tempFile);
-        //    return rowElements;
-        //}
-
-
-
         private static IEnumerable<InputRowElement> ReadInputRowElements(string fileName)
         {
-            CsvContext cc = new CsvContext();
-            CsvFileDescription fileDescription_logs = new CsvFileDescription
+            var cc = new CsvContext();
+            var fileDescription_logs = new CsvFileDescription
             {
                 SeparatorChar = ';', // default is ','
                 FirstLineHasColumnNames = false,
