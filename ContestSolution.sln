@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQtoCSV", "LINQtoCSV\LINQtoCSV.csproj", "{07058BF9-6F86-40FF-AE33-2A4F89B5758A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContestProject", "ContestProjectWPF\ContestProject.csproj", "{C8A42207-0595-4D75-A11B-57836C17E82B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContestProjectTests", "ContestProjectTests\ContestProjectTests.csproj", "{EF26CF06-AF76-452F-967E-ED7DBE888391}"
@@ -22,24 +20,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level1|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level1|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level2|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level2|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level3|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level3|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level4|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level4|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level5|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level5|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level6|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level6|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level7|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Level7|Any CPU.Build.0 = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07058BF9-6F86-40FF-AE33-2A4F89B5758A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level1|Any CPU.ActiveCfg = Level1|Any CPU
