@@ -30,9 +30,8 @@ namespace ContestProject.Utils
 
         static ObservableObjectExtensions()
             => _raisePropertyChangedMethod = (Action<ObservableObject, string>)typeof(ObservableObject)
-            .GetMethods(BindingFlags.NonPublic | BindingFlags.Instance)
-            .Where(m => m.Name is "RaisePropertyChanged")
-            .First(m => m.GetParameters().Length == 2)
+            .GetMethods(BindingFlags.Public | BindingFlags.Instance)
+            .First(m => m.Name is "RaisePropertyChanged")
             .CreateDelegate(typeof(Action<ObservableObject, string>));
 
         public static bool Set<T>(this ObservableObject @this, ref T field, T value, [CallerMemberName] string propertyName = null)
