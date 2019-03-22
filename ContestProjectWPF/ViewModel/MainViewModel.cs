@@ -8,74 +8,56 @@ namespace ContestProject.ViewModel
 {
     public partial class MainViewModel : ObservableObject
     {
-        private Task _curTask;
-
         public MainViewModel()
         {
+#pragma warning disable CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
             RunCommand = new DelegateCommand(() => RunAsync());
             RunFileCommand = new DelegateCommand(() => RunFileAsync());
+#pragma warning restore CS4014 // Because this call is not awaited, execution of the current method continues before the call is completed
 
             ClearOutputCommand = new DelegateCommand(ClearOutput, CanClearOutput);
         }
 
         protected void InvokeInUI(Action action, DispatcherPriority priority = DispatcherPriority.Send)
-        {
-            Application.Current.Dispatcher.Invoke(action, priority);
-        }
+            => Application.Current.Dispatcher.Invoke(action, priority);
 
         private async Task RunAsync()
-        {
-            var task = RunCodeAsync(CurInput);
-            _curTask = task;
-            string result = await task;
-            CurResult = result;
-        }
+            => CurResult = await RunCodeAsync(CurInput);
 
         private async Task RunFileAsync()
-        {
-            var task = RunFileAsync(Filename);
-            _curTask = task;
-            string result = await task;
-            CurResult = result;
-        }
+            => CurResult = await RunFileAsync(Filename);
 
         private void ClearOutput()
-        {
-            Output = String.Empty;
-        }
+            => Output = string.Empty;
 
         private bool CanClearOutput()
-        {
-            return !String.IsNullOrEmpty(Output);
-        }
+            => !string.IsNullOrEmpty(Output);
 
         private void WriteToOutput(string str)
-        {
-            Output = Output + str;
-        }
+            => Output = Output + str;
 
         private Task<string> RunCodeAsync(string input)
-        {
-            return Task.Run(() => RunCode(input));
-        }
+            => Task.Run(() => RunCode(input));
 
         private Task<string> RunFileAsync(string file)
-        {
-            return Task.Run(() => RunFile(file));
-        }
+            => Task.Run(() => RunFile(file));
 
         private string RunCode(string input)
         {
-            Code algorithm = new Code();
-            algorithm.ViewModel = this;
+            var algorithm = new Code
+            {
+                ViewModel = this
+            };
             algorithm.ExecuteInput(input);
             return algorithm.Output;
         }
 
         private string RunFile(string input)
         {
-            Code algorithm = new Code();
-            algorithm.ViewModel = this;
+            var algorithm = new Code
+            {
+                ViewModel = this
+            };
             algorithm.ExecuteFile(input);
             return algorithm.Output;
         }

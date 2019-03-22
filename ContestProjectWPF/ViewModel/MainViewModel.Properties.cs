@@ -4,52 +4,10 @@ namespace ContestProject.ViewModel
 {
     public partial class MainViewModel
     {
-        public DelegateCommand RunCommand { get; set; }
-        public DelegateCommand RunFileCommand { get; set; }
+        public DelegateCommand RunCommand { get; }
+        public DelegateCommand RunFileCommand { get; }
 
-        public DelegateCommand ClearOutputCommand { get; set; }
-
-        private string _javaArguments;
-        public string JavaArguments
-        {
-            get
-            {
-                return _javaArguments;
-            }
-            set
-            {
-                _javaArguments = value;
-                RaisePropertyChanged(() => JavaArguments);
-            }
-        }
-
-        private string _host;
-        public string Host
-        {
-            get
-            {
-                return _host;
-            }
-            set
-            {
-                _host = value;
-                RaisePropertyChanged(() => Host);
-            }
-        }
-
-        private int _port;
-        public int Port
-        {
-            get
-            {
-                return _port;
-            }
-            set
-            {
-                _port = value;
-                RaisePropertyChanged(() => Port);
-            }
-        }
+        public DelegateCommand ClearOutputCommand { get; }
 
         private string _curInput;
         public string CurInput
