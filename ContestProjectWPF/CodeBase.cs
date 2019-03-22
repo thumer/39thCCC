@@ -1,6 +1,4 @@
 ﻿using ContestProject.ViewModel;
-using LINQtoCSV;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
