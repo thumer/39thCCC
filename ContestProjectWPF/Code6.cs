@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using LINQtoCSV;
 
-namespace ContestProjectWPF
+namespace ContestProject
 {
 #if Level6
     public class Code: CodeBase

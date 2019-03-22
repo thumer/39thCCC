@@ -1,7 +1,7 @@
 ﻿using LINQtoCSV;
 using System;
 
-namespace ContestProjectWPF
+namespace ContestProject
 {
     // Because the fields in this type are used only indirectly, the compiler
     // will warn they are unused or unassigned. Disable those warnings.

@@ -14,7 +14,7 @@ using Expr = System.Linq.Expressions;
 //------------------------------------------------------------------------
 //  ExpressionHelper.cs
 //------------------------------------------------------------------------
-namespace ContestProjectWPF.Utils
+namespace ContestProject.Utils
 {
     /// <summary>
     /// Hilfsmethoden für Expressions.

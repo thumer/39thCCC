@@ -1,4 +1,4 @@
-﻿using ContestProjectWPF.Utils;
+﻿using ContestProject.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace ContestProjectWPF.ViewModel
+namespace ContestProject.ViewModel
 {
     public partial class MainViewModel : ObservableObject
     {

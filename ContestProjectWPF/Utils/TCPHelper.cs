@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace ContestProjectWPF.Utils
+namespace ContestProject.Utils
 {
     public class TCPHelper
     {

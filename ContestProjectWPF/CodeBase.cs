@@ -1,10 +1,10 @@
-﻿using ContestProjectWPF.ViewModel;
+﻿using ContestProject.ViewModel;
 using LINQtoCSV;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace ContestProjectWPF
+namespace ContestProject
 {
     public abstract class CodeBase
     {

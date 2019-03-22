@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace ContestProjectWPF.Utils
+namespace ContestProject.Utils
 {
     public class Helper
     {

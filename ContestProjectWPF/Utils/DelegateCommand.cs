@@ -14,7 +14,7 @@ using System.Windows.Threading;
 //------------------------------------------------------------------------
 //  DelegateCommand.cs
 //------------------------------------------------------------------------
-namespace ContestProjectWPF.Utils
+namespace ContestProject.Utils
 {
     /// <summary>
     /// Das DelegateCommand ist eine Standardimplementierung eines Commands, das ein Execute- und ein CanExecute-Delegate für die Ausführung kapselt. 

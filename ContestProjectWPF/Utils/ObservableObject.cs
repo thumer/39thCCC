@@ -18,7 +18,7 @@ using System.Runtime.CompilerServices;
 //------------------------------------------------------------------------
 //  ObservableObject.cs
 //------------------------------------------------------------------------
-namespace ContestProjectWPF.Utils
+namespace ContestProject.Utils
 {
     /// <summary>
     /// Basisklasse mit Unterstützung, um NotifyPropertyChanged-Events zu werfen.

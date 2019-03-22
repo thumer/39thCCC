@@ -1,4 +1,4 @@
-﻿using ContestProjectWPF;
+﻿using ContestProject;
 using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

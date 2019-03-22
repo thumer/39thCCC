@@ -1,11 +1,11 @@
-﻿using ContestProjectWPF.Utils;
+﻿using ContestProject.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ContestProjectWPF.ViewModel
+namespace ContestProject.ViewModel
 {
     public partial class MainViewModel
     {
