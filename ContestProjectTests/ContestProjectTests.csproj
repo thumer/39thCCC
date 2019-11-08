@@ -64,7 +64,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ContestProjectWPF\ContestProject.csproj">
+    <ProjectReference Include="..\ContestProject\ContestProject.csproj">
       <Project>{C8A42207-0595-4D75-A11B-57836C17E82B}</Project>
       <Name>ContestProject</Name>
     </ProjectReference>
