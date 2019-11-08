@@ -8,9 +8,9 @@ namespace ContestProject
 #if Level3
     public class Code : CodeBase
     {
-        protected override string Execute(string row)
+        public override string Execute(string input)
         {
-            throw new NotImplementedException();
+            return string.Empty;
         }
     }
 #endif

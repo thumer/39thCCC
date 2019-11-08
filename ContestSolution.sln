@@ -1,15 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2043
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContestProject", "ContestProject\ContestProject.csproj", "{C8A42207-0595-4D75-A11B-57836C17E82B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContestProject", "ContestProject\ContestProject.csproj", "{C8A42207-0595-4D75-A11B-57836C17E82B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContestProjectTests", "ContestProjectTests\ContestProjectTests.csproj", "{EF26CF06-AF76-452F-967E-ED7DBE888391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		Level1|Any CPU = Level1|Any CPU
 		Level2|Any CPU = Level2|Any CPU
 		Level3|Any CPU = Level3|Any CPU
@@ -17,11 +16,8 @@ Global
 		Level5|Any CPU = Level5|Any CPU
 		Level6|Any CPU = Level6|Any CPU
 		Level7|Any CPU = Level7|Any CPU
-		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C8A42207-0595-4D75-A11B-57836C17E82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8A42207-0595-4D75-A11B-57836C17E82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level1|Any CPU.ActiveCfg = Level1|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level1|Any CPU.Build.0 = Level1|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level2|Any CPU.ActiveCfg = Level2|Any CPU
@@ -36,26 +32,20 @@ Global
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level6|Any CPU.Build.0 = Level6|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level7|Any CPU.ActiveCfg = Level7|Any CPU
 		{C8A42207-0595-4D75-A11B-57836C17E82B}.Level7|Any CPU.Build.0 = Level7|Any CPU
-		{C8A42207-0595-4D75-A11B-57836C17E82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8A42207-0595-4D75-A11B-57836C17E82B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level1|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level1|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level2|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level2|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level3|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level3|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level4|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level4|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level5|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level5|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level6|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level6|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level7|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level7|Any CPU.Build.0 = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level1|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level1|Any CPU.Build.0 = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level2|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level2|Any CPU.Build.0 = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level3|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level3|Any CPU.Build.0 = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level4|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level4|Any CPU.Build.0 = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level5|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level5|Any CPU.Build.0 = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level6|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level6|Any CPU.Build.0 = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level7|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF26CF06-AF76-452F-967E-ED7DBE888391}.Level7|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
