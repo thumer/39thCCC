@@ -2,44 +2,38 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFramework>net6.0-windows</TargetFramework>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <UseWPF>true</UseWPF>
     <Configuration>Level1, Level2</Configuration>
     <Configurations>Debug;Release;Level1;Level2;Level3;Level4;Level5;Level6;Level7</Configurations>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level1|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level1</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level2|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level2</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level3|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level3</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level4|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level4</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level5|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level5</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level6|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level6</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level7|AnyCPU'">
-    <OutputPath>bin\$(Configuration)\</OutputPath>
     <DefineConstants>Level7</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Interactive" Version="4.0.0" />
+    <PackageReference Include="System.Interactive" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
