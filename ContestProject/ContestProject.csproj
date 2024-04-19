@@ -31,13 +31,15 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Level7|AnyCPU'">
     <DefineConstants>Level7</DefineConstants>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="System.Interactive" Version="6.0.1" />
+    <Compile Remove="Properties\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <None Remove="Properties\**" />
+    <Page Remove="Properties\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <PackageReference Include="System.Interactive" Version="6.0.1" />
   </ItemGroup>
 
 </Project>
