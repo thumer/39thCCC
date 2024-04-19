@@ -27,7 +27,7 @@ namespace ContestProject
             // Write output in File
             string outputFileName = GetOutFileName(fileName);
             File.WriteAllText(outputFileName, output);
-            Process.Start(outputFileName);
+            Process.Start(new ProcessStartInfo(outputFileName) { UseShellExecute = true });
             Output = output;
         }
 
